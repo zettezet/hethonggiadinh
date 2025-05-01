@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('images/z.jpg'); /* đổi đúng tên ảnh */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 20ls0vh;
+    position: relative;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;  /* căn giữa ngang */
+    align-items: center;      /* căn giữa dọc */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Tạo lớp phủ tối nhẹ để dễ đọc chữ */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* lớp mờ tối lên ảnh */
+    z-index: 0;
+}
+
+/* Lớp chứa nội dung chữ */
+.overlay {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 40%;
+    transform: translateY(-50%);
+    padding: 20px;
+}
+
+.overlay h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: auto;
+}
+  .center-text h1 {
+    font-size: 100px;
+    color: rgb(132, 0, 255);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0);
+    text-align: center;
+  }
